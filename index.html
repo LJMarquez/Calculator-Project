@@ -1,279 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mario Calculator</title>
     <style>
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Varela+Round&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&family=Varela+Round&display=swap");
 
-body {
-  margin: 0;
-  /*   background-image: linear-gradient(to bottom right, blue, lightblue, white); */
-  background-image: url(https://drive.google.com/uc?export=view&id=1KRONQydMFrvCMgzpTX5f2P7RDZWQAFe-),
-    url(https://drive.google.com/uc?export=view&id=1aqaMsFVPno7t6YI7zo7-nJsIH-1Xhy1z);
-  background-position: center bottom, center center;
-  background-size: auto, cover;
-  background-repeat: no-repeat, no-repeat;
-}
-.container {
-  width: 80%;
-  height: 100vh;
-  /*   background-color: lightgreen; */
-  /*   background-image: url(https://drive.google.com/uc?export=view&id=1KRONQydMFrvCMgzpTX5f2P7RDZWQAFe-),
-    url(https://drive.google.com/uc?export=view&id=1aqaMsFVPno7t6YI7zo7-nJsIH-1Xhy1z);
-  background-position: center bottom, center center;
-  background-size: auto, cover;
-  background-repeat: no-repeat, no-repeat; */
-  margin: auto;
-  position: relative;
-  /*     box-sizing: border-box; */
-}
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 2%;
-  align-items: center;
-}
-.parent {
-  /*     border: 1px solid lightblue; */
-  height: 80%;
-  box-sizing: border-box;
-}
-.p1 {
-  width: 55%;
-  float: left;
-  margin-left: 5%;
-}
-.p2 {
-  width: 35%;
-  float: right;
-  margin-right: 3%;
-  /*   background-color: red; */
-}
-.number-buttons {
-  height: 20%;
-  flex: 0 1 25%;
-  border-radius: 50rem;
-  font-size: 4vw;
-  font-weight: bold;
-  color: ;
-  background-image: linear-gradient(lightgreen, yellow);
-  font-family: "Outfit", sans-serif;
-  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.5);
-}
-div.container > span {
-  text-align: center;
-}
-#mario {
-  position: absolute;
-  width: 16%;
-  left: -7rem;
-  bottom: 6rem;
-}
-#luigi {
-  position: absolute;
-  width: 15%;
-  top: 2rem;
-  right: -3.5rem;
-}
-.operator {
-  height: 15%;
-  flex: 0 1 50%;
-  justify-content: left;
-  border-radius: 10%;
-  font-size: 4vw;
-  font-weight: bold;
-  color: white;
-  background-image: linear-gradient(lightblue, blue);
-  font-family: "Outfit", sans-serif;
-  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.5);
-}
-#display {
-  text-align: right;
-  background-image: linear-gradient(white, lightgreen);
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 0.5rem;
-  width: 60%;
-  height: 10vh;
-  display: block;
-  font-family: "Outfit", sans-serif;
-  font-size: 2.5rem;
-}
-#input-wrapper {
-  padding: 2rem;
-  width: 90%;
-  text-align: center;
-}
-#logo {
-  position: absolute;
-  width: 13%;
-  /*   height: 10%; */
-  top: 3%;
-  left: -1%;
-}
-#equal {
-  height: 20%;
-  /*   2 0 60% */
-  flex: 0 0 60%;
-  order: 10;
-}
-
+      body {
+        margin: 0;
+        background-image: url(./assets/mario-wonder-bg.png),
+          url(./assets/mario-wonder-sky.jpg);
+        background-position: center bottom, center center;
+        background-size: auto, cover;
+        background-repeat: no-repeat, no-repeat;
+      }
+      .container {
+        width: 80%;
+        height: 100vh;
+        margin: auto;
+        position: relative;
+      }
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 2%;
+        align-items: center;
+      }
+      .parent {
+        height: 80%;
+        box-sizing: border-box;
+      }
+      .p1 {
+        width: 55%;
+        float: left;
+        margin-left: 5%;
+      }
+      .p2 {
+        width: 35%;
+        float: right;
+        margin-right: 3%;
+      }
+      .number-buttons {
+        height: 20%;
+        flex: 0 1 25%;
+        border-radius: 50rem;
+        font-size: 4vw;
+        font-weight: bold;
+        background-image: linear-gradient(lightgreen, yellow);
+        font-family: "Outfit", sans-serif;
+        box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.5);
+      }
+      div.container > span {
+        text-align: center;
+      }
+      #mario {
+        position: absolute;
+        width: 16%;
+        left: -7rem;
+        bottom: 6rem;
+      }
+      #luigi {
+        position: absolute;
+        width: 15%;
+        top: 2rem;
+        right: -3.5rem;
+      }
+      .operator {
+        height: 15%;
+        flex: 0 1 50%;
+        justify-content: left;
+        border-radius: 10%;
+        font-size: 4vw;
+        font-weight: bold;
+        color: white;
+        background-image: linear-gradient(lightblue, blue);
+        font-family: "Outfit", sans-serif;
+        box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.5);
+      }
+      #display {
+        text-align: right;
+        background-image: linear-gradient(white, lightgreen);
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 0.5rem;
+        width: 60%;
+        height: 10vh;
+        display: block;
+        font-family: "Outfit", sans-serif;
+        font-size: 2.5rem;
+      }
+      #input-wrapper {
+        padding: 2rem;
+        width: 90%;
+        text-align: center;
+      }
+      #logo {
+        position: absolute;
+        width: 13%;
+        top: 3%;
+        left: -1%;
+      }
+      #equal {
+        height: 20%;
+        flex: 0 0 60%;
+        order: 10;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <img src="https://drive.google.com/uc?export=view&id=1zyVmT7GR7QsN2P_8A2UDZ02r5dDmrCqa" alt="" id="logo">
-        <div id="input-wrapper">
-          <input type="text" maxLength="10" id="display" disabled />
-        </div>
-        <div class="parent p1 flex" id="buttons1">
-          <button class="operator input-button" id="equal" type="button">=</button>
-          <!--     <button class="number-buttons" type="button">0</button>
-          <button class="number-buttons" type="button">1</button>
-          <button class="number-buttons" type="button">2</button>
-          <button class="number-buttons" type="button">3</button>
-          <button class="number-buttons" type="button">4</button>
-          <button class="number-buttons" type="button">5</button>
-          <button class="number-buttons" type="button">6</button>
-          <button class="number-buttons" type="button">7</button>
-          <button class="number-buttons" type="button">8</button>
-          <button class="number-buttons" type="button">9</button> -->
-          <img id="mario" src="https://drive.google.com/uc?export=view&id=1stqq_Q-zXOnRgo8DpqyYbBeLRZiS1IYF" />
-        </div>
-        <div class="parent p2 flex">
-          <button class="operator inputbutton" id="clear">C</button>
-          <button class="operator inputbutton" id="add">+</button>
-          <button class="operator inputbutton" id="subtract">-</button>
-          <button class="operator inputbutton" id="multiply">*</button>
-          <button class="operator inputbutton" id="divide">/</button>
-          <img id="luigi" src="https://drive.google.com/uc?export=view&id=1IFdjIgUxoSA-KqD7dwNnmowrKWsE5tQV" />
-        </div>
+      <img
+        src="./assets/Super_Mario_Bros._Wonder_Logo.png"
+        alt=""
+        id="logo"
+      />
+      <div id="input-wrapper">
+        <input type="text" maxlength="10" id="display" disabled />
       </div>
-      <!-- <img src="https://drive.google.com/uc?export=view&id=1aqaMsFVPno7t6YI7zo7-nJsIH-1Xhy1z" alt=""> -->
+      <div class="parent p1 flex" id="buttons1">
+        <button class="operator input-button" id="equal" type="button">
+          =
+        </button>
+        <img
+          id="mario"
+          src="./assets/mario.png"
+          alt=""
+        />
+      </div>
+      <div class="parent p2 flex">
+        <button class="operator inputbutton" id="clear">C</button>
+        <button class="operator inputbutton" id="add">+</button>
+        <button class="operator inputbutton" id="subtract">-</button>
+        <button class="operator inputbutton" id="multiply">*</button>
+        <button class="operator inputbutton" id="divide">/</button>
+        <img
+          id="luigi"
+          src="./assets/luigi-prince-florian.png"
+          alt=""
+        />
+      </div>
+    </div>
 
-<script>
-    const calculator = document.getElementById("container");
-const resultDisplay = document.getElementById("display");
-const buttons1 = document.getElementById("buttons1");
-const clearButton = document.getElementById("clear");
-const equalButton = document.getElementById("equal");
-const addButton = document.getElementById("add");
-const minusButton = document.getElementById("subtract");
-const divideButton = document.getElementById("divide");
-const multiplyButton = document.getElementById("multiply");
-const maxLength = resultDisplay.getAttribute("maxLength");
+    <script>
+      const calculator = document.getElementById("container");
+      const resultDisplay = document.getElementById("display");
+      const buttons1 = document.getElementById("buttons1");
+      const clearButton = document.getElementById("clear");
+      const equalButton = document.getElementById("equal");
+      const addButton = document.getElementById("add");
+      const minusButton = document.getElementById("subtract");
+      const divideButton = document.getElementById("divide");
+      const multiplyButton = document.getElementById("multiply");
+      const maxLength = resultDisplay.getAttribute("maxLength");
 
-let tempNumber = null;
-let firstNumber = null;
-let secondNumber = null;
-let operation = null;
-let result = null;
+      let tempNumber = null;
+      let firstNumber = null;
+      let secondNumber = null;
+      let operation = null;
+      let result = null;
 
-resultDisplay.value = "0";
+      resultDisplay.value = "0";
 
-for (let i = 0; i < 10; i++) {
-  const button = document.createElement("button");
-  button.type = "button";
-  button.classList.add("number-buttons");
-  button.textContent = i;
-  button.setAttribute("data-value", i);
-  if (i === 0) {
-    button.style.order = 1;
-  }
-  buttons1.appendChild(button);
-}
-
-const numberButtons = document.querySelectorAll(".number-buttons");
-
-numberButtons.forEach((button, index) => {
-  let dataValue = parseInt(button.getAttribute("data-value"));
-  button.addEventListener("click", function (event) {
-    if (resultDisplay.value.length < maxLength) {
-      if (operation === null) {
-        if (firstNumber === null || firstNumber === 0) {
-          firstNumber = dataValue;
-        } else {
-          firstNumber = parseInt(firstNumber.toString().concat(dataValue));
+      for (let i = 0; i < 10; i++) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.classList.add("number-buttons");
+        button.textContent = i;
+        button.setAttribute("data-value", i);
+        if (i === 0) {
+          button.style.order = 1;
         }
-        resultDisplay.value = firstNumber.toString();
-      } else {
-        if (secondNumber === null || secondNumber === 0) {
-          secondNumber = dataValue;
-        } else {
-          secondNumber = parseInt(secondNumber.toString().concat(dataValue));
+        buttons1.appendChild(button);
+      }
+
+      const numberButtons = document.querySelectorAll(".number-buttons");
+
+      numberButtons.forEach((button, index) => {
+        let dataValue = parseInt(button.getAttribute("data-value"));
+        button.addEventListener("click", function (event) {
+          if (resultDisplay.value.length < maxLength) {
+            if (operation === null) {
+              if (firstNumber === null || firstNumber === 0) {
+                firstNumber = dataValue;
+              } else {
+                firstNumber = parseInt(
+                  firstNumber.toString().concat(dataValue)
+                );
+              }
+              resultDisplay.value = firstNumber.toString();
+            } else {
+              if (secondNumber === null || secondNumber === 0) {
+                secondNumber = dataValue;
+              } else {
+                secondNumber = parseInt(
+                  secondNumber.toString().concat(dataValue)
+                );
+              }
+              resultDisplay.value = secondNumber.toString();
+            }
+          }
+        });
+      });
+
+      function clearValues() {
+        tempNumber = null;
+        firstNumber = null;
+        secondNumber = null;
+        operation = null;
+        result = null;
+        resultDisplay.value = "0";
+      }
+
+      clearButton.addEventListener("click", function () {
+        clearValues();
+      });
+
+      const operatorButtons = document.querySelectorAll(".operator");
+
+      operatorButtons.forEach((button) => {
+        button.addEventListener("click", function (event) {
+          const thisOperation = event.target.id;
+          if (firstNumber !== null && secondNumber === null) {
+            switch (thisOperation) {
+              case "add":
+                operation = "+";
+                break;
+              case "subtract":
+                operation = "-";
+                break;
+              case "multiply":
+                operation = "*";
+                break;
+              case "divide":
+                operation = "/";
+                break;
+            }
+            resultDisplay.value = operation;
+          }
+        });
+      });
+
+      equalButton.addEventListener("click", function (event) {
+        if (secondNumber !== null) {
+          switch (operation) {
+            case "+":
+              result = firstNumber + secondNumber;
+              break;
+            case "-":
+              result = firstNumber - secondNumber;
+              break;
+            case "*":
+              result = firstNumber * secondNumber;
+              break;
+            case "/":
+              result = firstNumber / secondNumber;
+          }
+          resultDisplay.value = result;
+          tempNumber = null;
+          firstNumber = null;
+          secondNumber = null;
+          operation = null;
+          result = null;
         }
-        resultDisplay.value = secondNumber.toString();
-      }
-    }
-  });
-});
-
-function clearValues() {
-  tempNumber = null;
-  firstNumber = null;
-  secondNumber = null;
-  operation = null;
-  result = null;
-  resultDisplay.value = "0";
-}
-
-clearButton.addEventListener("click", function () {
-  clearValues();
-});
-
-const operatorButtons = document.querySelectorAll(".operator");
-
-operatorButtons.forEach((button) => {
-  button.addEventListener("click", function (event) {
-    const thisOperation = event.target.id;
-    if (firstNumber !== null && secondNumber === null) {
-      switch (thisOperation) {
-        case "add":
-          operation = "+";
-          break;
-        case "subtract":
-          operation = "-";
-          break;
-        case "multiply":
-          operation = "*";
-          break;
-        case "divide":
-          operation = "/";
-          break;
-      }
-      resultDisplay.value = operation;
-    }
-  });
-});
-
-equalButton.addEventListener("click", function (event) {
-  if (secondNumber !== null) {
-    switch (operation) {
-      case "+":
-        result = firstNumber + secondNumber;
-        break;
-      case "-":
-        result = firstNumber - secondNumber;
-        break;
-      case "*":
-        result = firstNumber * secondNumber;
-        break;
-      case "/":
-        result = firstNumber / secondNumber;
-    }
-    resultDisplay.value = result;
-    tempNumber = null;
-    firstNumber = null;
-    secondNumber = null;
-    operation = null;
-    result = null;
-  }
-});
-
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>
